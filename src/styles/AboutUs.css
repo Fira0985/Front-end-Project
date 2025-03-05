@@ -1,0 +1,243 @@
+.about-section {
+    padding: 6rem 0;
+    background-color: #f9fafb;
+    overflow: hidden;
+}
+
+.about-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.about-header h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.about-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #7c3aed;
+    border-radius: 2px;
+}
+
+.about-header p {
+    color: #4b5563;
+    max-width: 48rem;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.value-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.value-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    color: #1f2937;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.value-card p {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.facility-section {
+    margin: 6rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    background-image: url('https://images.unsplash.com/photo-1576495199011-eb94736d05d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.facility-content {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.facility-content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.facility-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #a78bfa;
+}
+
+.reviews-section {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.reviews-section h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 3rem;
+    position: relative;
+    display: inline-block;
+}
+
+.reviews-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #7c3aed;
+    border-radius: 2px;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+}
+
+.review-quote {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 4rem;
+    color: #e5e7eb;
+    font-family: serif;
+    line-height: 1;
+}
+
+.review-text {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.review-author {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.author-name {
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 0.25rem;
+}
+
+.author-role {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .facility-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .about-header h2,
+    .reviews-section h3 {
+        font-size: 2rem;
+    }
+
+    .facility-content h3 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 4rem 0;
+    }
+
+    .facility-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .review-card {
+        padding: 1.5rem;
+    }
+}
