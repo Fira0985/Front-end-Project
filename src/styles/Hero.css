@@ -1,70 +1,135 @@
+/* Hero Section Styling */
 .hero-section {
-    position: relative;
-    height: 600px;
-    background-image: url('https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80');
-    background-size: cover;
-    background-position: center;
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    overflow: hidden;
+    padding: 0 10%;
+    margin-top: 5vh;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
 }
 
+/* Hero Content */
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 0 2rem;
+    flex: 1;
+    max-width: 50%;
+    color: #333;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
-    animation: fadeInDown 1s ease-out;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    color: #222;
 }
 
 .hero-content p {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
     line-height: 1.6;
-    animation: fadeInUp 1s ease-out 0.3s;
-    animation-fill-mode: both;
+    margin-bottom: 20px;
 }
 
+/* Hero Button */
 .hero-button {
-    padding: 1rem 2.5rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    background-color: #7c3aed;
-    color: white;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: #ff7f50;
     border: none;
-    border-radius: 9999px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease-out 0.6s;
-    animation-fill-mode: both;
+    transition: background 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(255, 127, 80, 0.3);
 }
 
 .hero-button:hover {
-    background-color: #6d28d9;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    background: #6d28d9;
 }
 
-@keyframes fadeInDown {
+/* Hero Image */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode Styles */
+.dark-hero-section {
+    background-color: #181818;
+    color: #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 100vh;
+    padding: 0 10%;
+    margin-top: 5vh;
+}
+
+
+.dark-hero-section .hero-content h1 {
+    color: #FFFFFF;
+}
+
+.dark-hero-section .hero-content p {
+    color: #BDBDBD;
+}
+
+/* CTA Button */
+.dark-hero-section .hero-button {
+    background-color: #FF8C00;
+    color: #FFFFFF;
+}
+
+.dark-hero-section .hero-button:hover {
+    background-color: blueviolet;
+    transform: scale(1.05);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image-container {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 80%;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(-20px);
@@ -73,47 +138,5 @@
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content p {
-        font-size: 1.125rem;
-    }
-
-    .hero-button {
-        padding: 0.875rem 2rem;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero-button {
-        padding: 0.75rem 1.75rem;
-        font-size: 0.875rem;
     }
 }

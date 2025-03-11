@@ -125,6 +125,47 @@
     }
 }
 
+/* Dark Mode Footer - Color Adjustments */
+.dark-footer {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-footer a {
+    color: white;
+}
+
+.dark-footer a:hover {
+    color: blueviolet;
+}
+
+.dark-footer .footer-section h5 {
+    color: #ffffff;
+}
+
+.dark-footer .footer-grid {
+    border-bottom: 1px solid #444;
+}
+
+.dark-footer .newsletter-form input {
+    background: #222;
+    color: #e0e0e0;
+}
+
+.dark-footer .newsletter-form button {
+    background: blueviolet;
+    color: white;
+}
+
+.dark-footer .newsletter-form button:hover {
+    background: blueviolet;
+}
+
+.dark-footer .footer-bottom {
+    color: #bbb;
+}
+
+
 @media (max-width: 480px) {
     .footer-section h5 {
         font-size: 1.125rem;

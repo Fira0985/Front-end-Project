@@ -3,3 +3,9 @@
   min-height: 100vh;
   background-color: #f9fafb;
 }
+
+.dark-app {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #181818;
+}

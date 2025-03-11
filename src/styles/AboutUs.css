@@ -207,6 +207,86 @@
     font-size: 0.875rem;
 }
 
+/* Dark Mode Styles for About Section */
+.dark-about-section {
+    background-color: #181818;
+    color: #E0E0E0;
+    padding: 80px 5%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-about-section .about-header h2 {
+    color: #FFFFFF;
+}
+
+.dark-about-section .about-header p {
+    color: #BDBDBD;
+}
+
+/* Value Cards */
+.dark-about-section .value-card {
+    background: #1E1E1E;
+    color: #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-about-section .value-card h3 {
+    color: #FFFFFF;
+}
+
+.dark-about-section .value-card p {
+    color: #BDBDBD;
+}
+
+/* Facility Section */
+.dark-about-section .facility-section {
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-about-section .facility-content h3 {
+    color: #FFFFFF;
+}
+
+.dark-about-section .facility-stats .stat-number {
+    color: #FF8C00;
+}
+
+.dark-about-section .facility-stats p {
+    color: #BDBDBD;
+}
+
+/* Reviews Section */
+.dark-about-section .reviews-section h3 {
+    color: #FFFFFF;
+}
+
+.dark-about-section .review-card {
+    background: #1E1E1E;
+    color: #E0E0E0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-about-section .review-quote {
+    color: #FF8C00;
+}
+
+.dark-about-section .review-text {
+    color: #BDBDBD;
+}
+
+.dark-about-section .review-author .author-name {
+    color: #FFFFFF;
+}
+
+.dark-about-section .review-author .author-role {
+    color: #BDBDBD;
+}
+
+
 @media (max-width: 768px) {
     .facility-stats {
         grid-template-columns: repeat(2, 1fr);

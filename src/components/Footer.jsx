@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import '../styles/Footer.css';
+import { Context } from './ThemeContext';
 
 export default function Footer() {
     const [email, setEmail] = useState('');
@@ -10,8 +11,10 @@ export default function Footer() {
         setEmail('');
     };
 
+    const {theme, ToggleTheme} = useContext(Context)
+
     return (
-        <footer className="footer">
+        <footer className={theme === "light"? "footer" : "dark-footer"}>
             <div className="footer-container">
                 <div className="footer-grid">
                     <div className="footer-section">

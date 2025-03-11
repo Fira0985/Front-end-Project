@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import '../styles/Products.css';
+import { Context } from './ThemeContext';
 
 const products = [
     {
@@ -60,56 +61,61 @@ export default function Products({ onProductClick }) {
     const [activeCategory, setActiveCategory] = useState("All");
     const [hoveredProduct, setHoveredProduct] = useState(null);
 
+    const { theme, ToggleTheme } = useContext(Context)
+
     return (
-        <section id="products" className="products-section">
-            <div className="products-header">
-                <h2>Our Products</h2>
-                <p>
-                    Explore our Juice Collection, where freshness meets flavor. Our juices are made from the finest fruits,
-                    offering a delicious and refreshing experience in every bottle.
-                </p>
-            </div>
+        <div className={theme === "light" ? "container" : "dark-container"}>
+            <section id="products" className={theme === "light" ? "products-section" : "dark-products-section"}>
+                <div className="products-header">
+                    <h2>Our Products</h2>
+                    <p>
+                        Explore our Juice Collection, where freshness meets flavor. Our juices are made from the finest fruits,
+                        offering a delicious and refreshing experience in every bottle.
+                    </p>
+                </div>
 
-            <div className="categories">
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        onClick={() => setActiveCategory(category)}
-                        className={`category-button ${activeCategory === category ? 'active' : ''}`}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
+                <div className="categories">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveCategory(category)}
+                            className={`category-button ${activeCategory === category ? 'active' : ''}`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
 
-            <div className="products-grid">
-                {products.map((product) => (
-                    <div
-                        key={product.id}
-                        className={`product-card ${hoveredProduct === product.id ? 'hovered' : ''}`}
-                        onClick={() => onProductClick(product)}
-                        onMouseEnter={() => setHoveredProduct(product.id)}
-                        onMouseLeave={() => setHoveredProduct(null)}
-                    >
-                        <div className="product-image">
-                            <img src={product.image} alt={product.name} />
-                            <div className="product-overlay">
-                                <button className="quick-view">Quick View</button>
+                <div className="products-grid">
+                    {products.map((product) => (
+                        <div
+                            key={product.id}
+                            className={`product-card ${hoveredProduct === product.id ? 'hovered' : ''}`}
+                            onClick={() => onProductClick(product)}
+                            onMouseEnter={() => setHoveredProduct(product.id)}
+                            onMouseLeave={() => setHoveredProduct(null)}
+                        >
+                            <div className="product-image">
+                                <img src={product.image} alt={product.name} />
+                                <div className="product-overlay">
+                                    <button className="quick-view">Quick View</button>
+                                </div>
+                            </div>
+                            <div className="product-details">
+                                <h3>{product.name}</h3>
+                                <p>{product.description}</p>
+                                <div className="product-footer">
+                                    <span className="price">${product.price.toFixed(2)}</span>
+                                    <button className="order-button">
+                                        Order Now
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                        <div className="product-details">
-                            <h3>{product.name}</h3>
-                            <p>{product.description}</p>
-                            <div className="product-footer">
-                                <span className="price">${product.price.toFixed(2)}</span>
-                                <button className="order-button">
-                                    Order Now
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </section>
+        </div>
+
     );
 }

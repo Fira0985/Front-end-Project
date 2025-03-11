@@ -63,9 +63,9 @@
 }
 
 .category-button.active {
-    background-color: #7c3aed;
+    background-color: blueviolet;
     color: white;
-    border-color: #6d28d9;
+    border-color: blueviolet;
 }
 
 .products-grid {
@@ -170,7 +170,7 @@
 }
 
 .order-button {
-    background-color: #7c3aed;
+    background-color: #ff7f50;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
@@ -183,6 +183,73 @@
     background-color: #6d28d9;
     transform: translateY(-2px);
 }
+
+
+/* Dark Mode for Products Section */
+
+.dark-container{
+    background-color: #181818;
+}
+
+.dark-products-section {
+    background-color: #181818;
+    color: #E0E0E0;
+    padding: 4rem 1rem;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.dark-products-section .products-header h2 {
+    color: #FFFFFF;
+}
+
+.dark-products-section .products-header p {
+    color: #BDBDBD;
+}
+
+
+.dark-products-section .categories button {
+    background: transparent;
+    color: #BDBDBD;
+}
+
+.dark-products-section .categories button.active,
+.dark-products-section .categories button:hover {
+    background-color: blueviolet;
+    color: #FFFFFF;
+    border-color: blueviolet;
+}
+
+/* Product Card */
+.dark-products-section .product-card {
+    background: #1E1E1E;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-products-section .product-card:hover {
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+}
+
+
+/* Quick View Overlay */
+.dark-products-section .product-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s ease;
+}
+
+.dark-products-section .product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.dark-products-section .product-details h3 {
+    color: #FFFFFF;
+}
+
+.dark-products-section .product-details p {
+    color: #BDBDBD;
+
+}
+
 
 @media (max-width: 768px) {
     .products-header h2 {

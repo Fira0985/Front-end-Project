@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import '../styles/AboutUs.css';
+import { Context } from './ThemeContext';
 
 export default function AboutUs() {
     const reviews = [
@@ -29,8 +31,10 @@ export default function AboutUs() {
         { label: "Daily Production", value: "10K+" }
     ];
 
+    const {theme, ToggleTheme} = useContext(Context)
+
     return (
-        <section id="about" className="about-section">
+        <section id="about" className={theme === "light"? "about-section": "dark-about-section"}>
             <div className="about-container">
                 <div className="about-header">
                     <h2>About Us</h2>
