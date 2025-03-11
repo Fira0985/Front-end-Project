@@ -159,16 +159,24 @@
 
 
 @media (max-width: 768px) {
-    .navbar-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-    }
 
+    .navbar-logo{
+        position: relative;
+        margin-left: 1vw;
+    }
     /* Hide search bar on mobile */
     .search-container {
         display: none;
+    }
+
+    .cart-container{
+        position: relative;
+        left: -8vw;
+    }
+
+    .menu-button{
+        position: relative;
+        left: -6vw;
     }
 
     /* Navbar links (hidden by default) */
