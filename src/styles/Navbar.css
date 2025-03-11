@@ -177,6 +177,8 @@
     .menu-button{
         position: relative;
         left: -6vw;
+        background-color: black;
+        color: white;
     }
 
     /* Navbar links (hidden by default) */
