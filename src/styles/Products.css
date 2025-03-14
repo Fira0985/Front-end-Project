@@ -187,6 +187,13 @@
     transform: translateY(-2px);
 }
 
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust based on your layout */
+}
+
 
 /* Dark Mode for Products Section */
 
