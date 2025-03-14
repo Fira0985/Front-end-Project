@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import heroImage from "../assets/pexels-charlotte-may-5946659.jpg";
 import '../styles/Hero.css';
 import { Context } from './ThemeContext';
 
@@ -14,7 +15,7 @@ export default function Hero() {
                 </div>
                 <div className="hero-image-container">
                     <img
-                        src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+                        src={heroImage}
                         alt="Fresh Organic Juice"
                         className="hero-image"
                     />

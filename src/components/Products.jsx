@@ -1,4 +1,10 @@
 import { useContext, useState } from 'react';
+import image1 from "../assets/pexels-brunoscramgnon-1337825.jpg";
+import image2 from "../assets/pexels-charlotte-may-5946659.jpg";
+import image3 from "../assets/pexels-element5-775032.jpg";
+import image4 from "../assets/pexels-fotios-photos-1161547.jpg";
+import image5 from "../assets/pexels-marceloverfe-27584413.jpg";
+import image6 from "../assets/pexels-rkftr-4335613.jpg";
 import '../styles/Products.css';
 import { Context } from './ThemeContext';
 
@@ -8,42 +14,42 @@ const products = [
         name: "Fresh Orange Juice",
         description: "Pure and refreshing orange juice made from fresh fruits",
         price: 4.99,
-        image: "https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: image1
     },
     {
         id: 2,
         name: "Berry Blast",
         description: "A delicious mix of fresh berries",
         price: 5.99,
-        image: "https://images.unsplash.com/photo-1505252585461-04db1eb84625?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: image2
     },
     {
         id: 3,
         name: "Green Detox",
         description: "Healthy blend of green vegetables and fruits",
         price: 6.99,
-        image: "https://images.unsplash.com/photo-1610970881699-44a5587144e6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: image3
     },
     {
         id: 4,
         name: "Tropical Paradise",
         description: "Exotic blend of tropical fruits",
         price: 7.99,
-        image: "https://images.unsplash.com/photo-1546173159-315724eb42c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: image4
     },
     {
         id: 5,
         name: "Mango Tango",
         description: "Sweet and tangy mango juice",
         price: 5.99,
-        image: "https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: image5
     },
     {
         id: 6,
         name: "Watermelon Fresh",
         description: "Refreshing watermelon juice",
         price: 4.99,
-        image: "https://images.unsplash.com/photo-1527661591475-5bcf8dba9f9f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+        image: image6
     }
 ];
 
