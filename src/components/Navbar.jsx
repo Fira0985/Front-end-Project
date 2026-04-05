@@ -15,7 +15,7 @@ export default function Navbar({ onCartToggle, onSearchChange }) {
     <nav className={theme === "light" ? "navbar" : "dark-navbar"}>
       <div className="navbar-container">
         {/* Logo (hidden when menu opens) */}
-        {!isMenuOpen && <span className="navbar-logo">Penny Juice</span>}
+        {!isMenuOpen && <span className="navbar-logo">FiraJuice</span>}
 
         {theme === "light" ? (
           <Sun className="light" onClick={ToggleTheme} />

@@ -9,15 +9,15 @@ export default function Hero() {
         <section className={theme === "light"? "hero-section": "dark-hero-section"}>
             <div className="hero-container">
                 <div className="hero-content">
-                    <h1>Penny Juice</h1>
+                    <h1>FiraJuice</h1>
                     <h3>Nature's Finest, Bottle for You</h3>
-                    <p>Experience the pure essence of organic fruits with Penny Juice. No additives, no preservatives—just 100% natural goodness delivered to your doorstep or ready for pickup.</p>
+                    <p>Experience the pure essence of organic fruits with FiraJuice. No additives, no preservatives—just 100% natural goodness delivered to your doorstep or ready for pickup.</p>
                     <a href="#products" className="hero-button">Explore Flavors</a>
                 </div>
                 <div className="hero-image-container">
                     <img
                         src={heroImage}
-                        alt="Fresh Organic Penny Juice"
+                        alt="Fresh Organic FiraJuice"
                         className="hero-image"
                     />
                 </div>

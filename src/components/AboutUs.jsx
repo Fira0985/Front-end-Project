@@ -7,7 +7,7 @@ export default function AboutUs() {
     const reviews = [
         {
             id: 1,
-            text: "Penny Juice is my go-to for refreshing, natural energy! The Orange Juice is unmatched.",
+            text: "FiraJuice is my go-to for refreshing, natural energy! The Orange Juice is unmatched.",
             author: "Sarah Johnson",
             role: "Health Enthusiast"
         },
@@ -38,12 +38,12 @@ export default function AboutUs() {
         <section id="about" className={theme === "light" ? "about-section" : "dark-about-section"}>
             <div className="about-container">
                 <div className="about-header">
-                    <h2>About Penny Juice</h2>
+                    <h2>About FiraJuice</h2>
                     <div className="story-container">
                         <div className="story-text">
                             <h3>Our Story</h3>
                             <p>
-                                Founded in 2010, Penny Juice started with a simple mission: to make fresh, organic juice accessible to everyone. What began in a small kitchen has grown into a community staple, but our values remain the same. We believe in the power of nature to nourish and energize.
+                                Founded in 2010, FiraJuice started with a simple mission: to make fresh, organic juice accessible to everyone. What began in a small kitchen has grown into a community staple, but our values remain the same. We believe in the power of nature to nourish and energize.
                             </p>
                             <h3>Our Mission</h3>
                             <p>

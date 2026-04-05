@@ -33,7 +33,7 @@ export default function HealthBenefits() {
         <section className={theme === "light" ? "benefits-section" : "dark-benefits-section"}>
             <div className="benefits-container">
                 <div className="benefits-header">
-                    <h2>Why Penny Juice?</h2>
+                    <h2>Why FiraJuice?</h2>
                     <p>Experience the transformative power of nature's liquid gold.</p>
                 </div>
 
