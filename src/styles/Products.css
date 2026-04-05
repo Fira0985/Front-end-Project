@@ -261,6 +261,29 @@
 }
 
 
+.ingredients-list {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+.dark-products-section .ingredients-list {
+    color: #9ca3af;
+}
+
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+.dark-products-section .no-results {
+    color: #9ca3af;
+}
+
 @media (max-width: 768px) {
     .products-header h2 {
         font-size: 2rem;
