@@ -1,0 +1,174 @@
+.proof-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 3000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.proof-content {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 30px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.dark-app .proof-content {
+  background: #1e1e1e;
+  color: white;
+}
+
+.proof-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.proof-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.proof-header h2 {
+  color: #4CAF50;
+  margin: 10px 0;
+}
+
+.proof-body {
+  border: 2px dashed #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.dark-app .proof-body {
+  background: #2a2a2a;
+  border-color: #444;
+}
+
+.proof-section {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.dark-app .proof-section {
+  border-color: #333;
+}
+
+.proof-section h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #ff7f50;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.dark-app .summary-total {
+  color: white;
+}
+
+.qr-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-section p {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  border: 10px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.qr-hint {
+  margin-top: 10px !important;
+  font-weight: 600;
+  color: #ff7f50 !important;
+}
+
+.proof-footer {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.print-button {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto 15px;
+  cursor: pointer;
+}
+
+.save-hint {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-proof, #printable-proof * {
+    visibility: visible;
+  }
+  #printable-proof {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: none;
+  }
+  .proof-overlay {
+    background: white;
+  }
+  .proof-content {
+    box-shadow: none;
+    max-height: none;
+  }
+}

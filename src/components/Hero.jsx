@@ -4,19 +4,20 @@ import '../styles/Hero.css';
 import { Context } from './ThemeContext';
 
 export default function Hero() {
-    const {theme, ToggleTheme} = useContext(Context) 
+    const {theme} = useContext(Context) 
     return (
         <section className={theme === "light"? "hero-section": "dark-hero-section"}>
             <div className="hero-container">
                 <div className="hero-content">
-                    <h1>Welcome to Sweet Organics</h1>
-                    <p>Discover our range of fresh and delicious juices that bring you pure refreshment. Made with love, served with care.</p>
-                    <button className="hero-button">Order Now</button>
+                    <h1>Penny Juice</h1>
+                    <h3>Nature's Finest, Bottle for You</h3>
+                    <p>Experience the pure essence of organic fruits with Penny Juice. No additives, no preservatives—just 100% natural goodness delivered to your doorstep or ready for pickup.</p>
+                    <a href="#products" className="hero-button">Explore Flavors</a>
                 </div>
                 <div className="hero-image-container">
                     <img
                         src={heroImage}
-                        alt="Fresh Organic Juice"
+                        alt="Fresh Organic Penny Juice"
                         className="hero-image"
                     />
                 </div>

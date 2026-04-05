@@ -7,22 +7,22 @@ export default function Footer() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Handle newsletter subscription
+        alert(`Thanks for subscribing, ${email}!`);
         setEmail('');
     };
 
-    const {theme, ToggleTheme} = useContext(Context)
+    const {theme} = useContext(Context)
 
     return (
         <footer className={theme === "light"? "footer" : "dark-footer"}>
             <div className="footer-container">
                 <div className="footer-grid">
                     <div className="footer-section">
-                        <h5>Contact Us</h5>
+                        <h5>Penny Juice</h5>
                         <ul>
                             <li>123 Juice Street, Organic City</li>
                             <li>Phone: +1 (555) 123-4567</li>
-                            <li>Email: hello@sweetorganics.com</li>
+                            <li>Email: hello@pennyjuice.com</li>
                         </ul>
                     </div>
 
@@ -30,7 +30,7 @@ export default function Footer() {
                         <h5>Quick Links</h5>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#products">Products</a></li>
+                            <li><a href="#products">Our Products</a></li>
                             <li><a href="#about">About Us</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -53,9 +53,9 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; 2024 Sweet Organics. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Penny Juice. All rights reserved.</p>
                 </div>
             </div>
         </footer>
     );
-}
+}
