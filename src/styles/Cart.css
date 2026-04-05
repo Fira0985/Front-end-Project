@@ -17,6 +17,12 @@
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 480px) {
+    .cart-content {
+        max-width: 100%;
+    }
+}
+
 .dark-app .cart-content {
     background: #181818;
     color: white;

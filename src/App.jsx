@@ -32,7 +32,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div>
       <ThemeContext>
         <CartProvider>
           <Navbar onCartToggle={handleCartToggle} onSearchChange={handleSearchChange} />

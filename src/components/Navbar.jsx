@@ -14,16 +14,10 @@ export default function Navbar({ onCartToggle, onSearchChange }) {
   return (
     <nav className={theme === "light" ? "navbar" : "dark-navbar"}>
       <div className="navbar-container">
-        {/* Logo (hidden when menu opens) */}
-        {!isMenuOpen && <span className="navbar-logo">FiraJuice</span>}
+        {/* Logo */}
+        <span className="navbar-logo">FiraJuice</span>
 
-        {theme === "light" ? (
-          <Sun className="light" onClick={ToggleTheme} />
-        ) : (
-          <Moon className="dark" onClick={ToggleTheme} />
-        )}
-
-        {/* Navigation Links */}
+        {/* Navigation Links (Desktop: Middle, Mobile: Drawer) */}
         <div className={`navbar-links ${isMenuOpen ? "menu-open" : ""}`}>
           <a href="#" className="nav-link" onClick={() => setIsMenuOpen(false)}>
             Home
@@ -51,9 +45,9 @@ export default function Navbar({ onCartToggle, onSearchChange }) {
           </a>
         </div>
 
-        {/* Right Section - Search & Cart */}
+        {/* Right Section - Search, Theme, Cart, Menu */}
         <div className="navbar-right">
-          {/* Search Bar */}
+          {/* Search Bar (Hidden/Icon only on small screens?) */}
           <div className="search-container">
             <input
               type="text"
@@ -64,16 +58,26 @@ export default function Navbar({ onCartToggle, onSearchChange }) {
             <Search className="search-icon" />
           </div>
 
+          {/* Theme Toggle */}
+          <div className="theme-toggle">
+            {theme === "light" ? (
+              <Sun className="theme-icon light" onClick={ToggleTheme} />
+            ) : (
+              <Moon className="theme-icon dark" onClick={ToggleTheme} />
+            )}
+          </div>
+
           {/* Cart Icon */}
           <div className="cart-container" onClick={onCartToggle}>
             <ShoppingCart className="cart-icon" />
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </div>
 
-          {/* Menu Button */}
+          {/* Menu Button (Mobile Only) */}
           <button
             className="menu-button"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
           >
             {isMenuOpen ? <X className="menu-icon" /> : <Menu className="menu-icon" />}
           </button>

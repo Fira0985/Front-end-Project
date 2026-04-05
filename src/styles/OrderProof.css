@@ -11,13 +11,23 @@
 
 .proof-content {
   background: white;
-  width: 100%;
+  width: 95%;
   max-width: 500px;
   border-radius: 12px;
-  padding: 30px;
+  padding: 20px;
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
+}
+
+@media (max-width: 480px) {
+  .proof-body {
+    padding: 10px;
+  }
+  .qr-code {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .dark-app .proof-content {

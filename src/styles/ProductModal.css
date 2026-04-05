@@ -15,13 +15,12 @@
 
 .modal-content {
     background-color: white;
-    border-radius: 1rem;
-    background: white;
-    width: 100%;
-    max-width: 800px;
     border-radius: 12px;
+    width: 95%;
+    max-width: 800px;
     position: relative;
-    overflow: hidden;
+    max-height: 90vh;
+    overflow-y: auto;
     animation: slideUp 0.3s ease-out;
 }
 
@@ -163,24 +162,36 @@
     }
 }
 
-@media (max-width: 640px) {
-    .modal-content {
-        margin: 1rem;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
 
-    .modal-image {
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+    }
+    .modal-image-container {
         height: 200px;
     }
-
-    .modal-details h2 {
-        font-size: 1.25rem;
+    .modal-details {
+        padding: 20px;
     }
-
-    .modal-price {
-        font-size: 1.5rem;
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
     }
-
+    .modal-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
     .modal-button {
-        padding: 0.625rem 1.25rem;
+        width: 100%;
     }
 }
