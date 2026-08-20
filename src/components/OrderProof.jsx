@@ -15,7 +15,7 @@ export default function OrderProof({ order, onClose }) {
         <div className="proof-header">
           <CheckCircle size={48} color="#4CAF50" />
           <h2>Order Confirmed!</h2>
-          <p>Thank you for choosing FiraJuice.</p>
+          <p>Thank you for choosing Sweet Organics.</p>
         </div>
 
         <div className="proof-body" id="printable-proof">

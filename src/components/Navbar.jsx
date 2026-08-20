@@ -15,7 +15,7 @@ export default function Navbar({ onCartToggle, onSearchChange }) {
     <nav className={theme === "light" ? "navbar" : "dark-navbar"}>
       <div className="navbar-container">
         {/* Logo */}
-        <span className="navbar-logo">FiraJuice</span>
+        <span className="navbar-logo">Sweet Organics</span>
 
         {/* Navigation Links (Desktop: Middle, Mobile: Drawer) */}
         <div className={`navbar-links ${isMenuOpen ? "menu-open" : ""}`}>

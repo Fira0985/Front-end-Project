@@ -18,11 +18,11 @@ export default function Footer() {
             <div className="footer-container">
                 <div className="footer-grid">
                     <div className="footer-section">
-                        <h5>FiraJuice</h5>
+                        <h5>Sweet Organics</h5>
                         <ul>
                             <li>123 Juice Street, Organic City</li>
                             <li>Phone: +1 (555) 123-4567</li>
-                            <li>Email: hello@firajuice.com</li>
+                            <li>Email: hello@sweetorganics.com</li>
                         </ul>
                     </div>
 
@@ -53,9 +53,9 @@ export default function Footer() {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} FiraJuice. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Sweet Organics. All rights reserved.</p>
                 </div>
             </div>
         </footer>
     );
-}
+}
