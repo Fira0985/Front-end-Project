@@ -1,12 +1,11 @@
 {
-  "name": "dot",
-  "homepage": "https://your-username.github.io/your-repo-name",
+  "name": "Front-end-Project",
+  "homepage": "https://Fira0985.github.io/Front-end-Project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",

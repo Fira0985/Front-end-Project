@@ -23,9 +23,7 @@ export function CartProvider({ children }) {
 
     const addToCart = (product, details) => {
         setCart((prevCart) => {
-            // We allow multiple entries for the same product if details (instructions, etc.) differ
-            // but for simplicity here, we'll just add it as a new entry
-            return [...prevCart, { ...product, ...details, cartId: Date.now() }];
+             return [...prevCart, { ...product, ...details, cartId: Date.now() }];
         });
     };
 
