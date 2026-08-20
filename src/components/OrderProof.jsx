@@ -57,7 +57,7 @@ export default function OrderProof({ order, onClose }) {
 
           <div className="qr-section">
             <p>Show this code at the counter or to the delivery driver</p>
-            <img src={qrUrl} alt="Order QR Code" className="qr-code" />
+            <img src={qrUrl} alt="Order QR Code" className="qr-code" loading="lazy" decoding="async" />
             <p className="qr-hint">Scan to verify order</p>
           </div>
         </div>

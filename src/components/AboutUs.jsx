@@ -51,7 +51,7 @@ export default function AboutUs() {
                             </p>
                         </div>
                         <div className="story-image">
-                            <img src={storyImage} alt="Our Story" />
+                            <img src={storyImage} alt="Our Story" loading="lazy" decoding="async" />
                         </div>
                     </div>
                 </div>

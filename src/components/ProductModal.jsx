@@ -30,6 +30,8 @@ export default function ProductModal({ product, onClose }) {
                             src={product.image}
                             alt={product.name}
                             className="modal-image"
+                            loading="lazy"
+                            decoding="async"
                         />
                     </div>
                     <div className="modal-details">

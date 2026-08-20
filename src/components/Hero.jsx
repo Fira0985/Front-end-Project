@@ -19,6 +19,7 @@ export default function Hero() {
                         src={heroImage}
                         alt="Fresh Organic Sweet Organics"
                         className="hero-image"
+                        decoding="async"
                     />
                 </div>
             </div>

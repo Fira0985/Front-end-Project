@@ -49,7 +49,7 @@ export default function Cart({ isOpen, onClose }) {
                             ) : (
                                 cart.map((item) => (
                                     <div key={item.cartId} className="cart-item">
-                                        <img src={item.image} alt={item.name} />
+                                        <img src={item.image} alt={item.name} loading="lazy" decoding="async" />
                                         <div className="item-details">
                                             <h4>{item.name}</h4>
                                             <p className="item-meta">{item.pickupOption.toUpperCase()} | Qty: {item.quantity}</p>

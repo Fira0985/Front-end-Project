@@ -20,7 +20,7 @@ export default function Footer() {
                     <div className="footer-section">
                         <h5>Sweet Organics</h5>
                         <ul>
-                            <li>123 Juice Street, Organic City</li>
+                            <li>123 Juice Streets, Organic City</li>
                             <li>Phone: +1 (555) 123-4567</li>
                             <li>Email: hello@sweetorganics.com</li>
                         </ul>

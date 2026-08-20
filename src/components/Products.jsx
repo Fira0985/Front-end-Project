@@ -87,7 +87,7 @@ export default function Products({ onProductClick, searchQuery = "" }) {
                                     onMouseLeave={() => setHoveredProduct(null)}
                                 >
                                     <div className="product-image">
-                                        <img src={product.image} alt={product.name} />
+                                        <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
                                         <div className="product-overlay">
                                             <button className="quick-view">Customize Order</button>
                                         </div>
